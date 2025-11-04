@@ -9,6 +9,7 @@ def area(a, h):
     Возвращаемое значение:
         float: площадь треугольника
     '''
+    return a * h
 
 def perimetr(a, b, c):
     '''
@@ -24,5 +25,8 @@ def perimetr(a, b, c):
     Возвращаемое значние:
         float: периметр треугольника
     '''
-
+    sides = [a, b, c]
+    for i in range(0, len(sides)):
+        if sides[i] >= sides[i - 1] + sides[i - 2]:
+            return "Any side can't be more than summary of another two"
     return a + b + c

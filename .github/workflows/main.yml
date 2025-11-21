@@ -1,0 +1,24 @@
+name: Unit tests
+on:
+  push:
+    branches:
+      - new_features_2_504776
+  pull_request:
+    branches:
+      - new_features_2_504776
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'

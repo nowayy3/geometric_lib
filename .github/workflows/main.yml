@@ -2,10 +2,10 @@ name: Unit tests
 on:
   push:
     branches:
-      - new_features_2_504776
+      - new_features_2_501317
   pull_request:
     branches:
-      - new_features_2_504776
+      - new_features_2_501317
 
 jobs:
   test:
